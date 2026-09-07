@@ -1,29 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
-import './styles/App.css'
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Certifications from "./sections/Certifications";
+import Footer from "./sections/Footer";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Navigation />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Certifications />
+      <Contact />
       <Footer />
-    </Router>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
